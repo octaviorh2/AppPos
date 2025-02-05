@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APPOS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3fb8bf733d57115d5348d1e8d1312a267c1e5d83")]
 [assembly: System.Reflection.AssemblyProductAttribute("APPOS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APPOS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -34,13 +34,13 @@ namespace APPOS.Services.Data
         private async Task CreateDefaultUser()
         {
             var db = _database;
-            var user = await db.Table<User>().FirstOrDefaultAsync(u => u.Mail == "ab");
+            var user = await db.Table<User>().FirstOrDefaultAsync(u => u.Mail == "Admin");
             if (user == null)
             {
                 var defaultUser = new User
                 {
-                    Mail = "ab",
-                    Password = BCrypt.Net.BCrypt.HashPassword("ab") // Encriptar la contraseña
+                    Mail = "Admin",
+                    Password = BCrypt.Net.BCrypt.HashPassword("Admin") // Encriptar la contraseña
                 };
                 await db.InsertAsync(defaultUser);
             }
