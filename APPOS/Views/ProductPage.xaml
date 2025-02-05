@@ -1,0 +1,118 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPOS.Views.ProductPage"
+             Title="Products">
+
+   
+        <Grid>
+        <!-- Aquí va tu contenido principal -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!-- Esto ocupa el espacio restante -->
+                    <RowDefinition Height="Auto" />
+                    <!-- Esto es para el botón fijo en la parte inferior -->
+                </Grid.RowDefinitions>
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Padding="10">
+               
+                <CollectionView ItemsSource="{Binding productos}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="1" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" ColumnDefinitions="Auto, 1*" RowDefinitions="Auto, Auto, Auto, Auto" >
+                                <!-- Imagen a la izquierda -->
+                                <Image Grid.Row="0" Grid.Column="0" 
+                                       Source="{Binding image}" 
+                                       HeightRequest="150" 
+                                       WidthRequest="200"
+                                       Aspect="AspectFit"
+                                       Margin="5" />
+
+                                <!-- Detalles a la derecha -->
+                                <StackLayout Grid.Row="0" Grid.Column="1" Padding="5" VerticalOptions="Start">
+                                    <Label Text="{Binding title}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Start" />
+                                    <Label Text="{Binding description}" FontSize="14" HorizontalOptions="Start" VerticalOptions="Start" />
+                                    <Label Text="{Binding price, StringFormat='${0:N2}'}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" />
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="End" VerticalOptions="End">
+                                
+
+                                    <Button 
+                                        
+                                            BackgroundColor="#007AFF"
+                                            TextColor="White" 
+                                            FontSize="14"
+                                            CornerRadius="50"
+                                            VerticalOptions="Center"
+                                            Clicked="OnAddToCartButtonClicked">
+                                        <Button.ImageSource>
+                                            <FileImageSource File="carrito.png" />
+                                        </Button.ImageSource>
+
+                                        <Button.WidthRequest>45</Button.WidthRequest>
+                                        <Button.HeightRequest>45</Button.HeightRequest>
+                                    </Button>
+                                </StackLayout>
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- ActivityIndicator centrado como alerta -->
+        <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           Color="Gray"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"
+                           Scale="1.5" />
+
+        <!-- Mensaje de "Cargando..." -->
+        <Label Text="Cargando productos..."
+               IsVisible="{Binding IsLoading}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="18" 
+               FontAttributes="Bold" 
+               TextColor="Gray" />
+        <Grid Grid.Row="2" Padding="4"  BackgroundColor="{DynamicResource PageBackgroundColor}" HeightRequest="60">
+            <Button Grid.Row="1" 
+            BackgroundColor="#007AFF" 
+            TextColor="White" 
+            FontSize="14" 
+           HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnCartButtonClicked" 
+           >      
+                <Button.ImageSource>
+                    <FileImageSource File="carritotab.png"/>
+                </Button.ImageSource>
+            </Button>
+        </Grid>
+
+        <!--<Button Grid.Row="1" 
+                BackgroundColor="#007AFF" 
+                TextColor="White" 
+                FontSize="14" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Clicked="OnCartButtonClicked" 
+                HeightRequest="60" 
+                WidthRequest="60">
+            <Button.ImageSource>
+                <FileImageSource File="carritotab.png"/>
+            </Button.ImageSource>
+        </Button>-->
+
+    </Grid>
+
+ 
+
+
+</ContentPage>

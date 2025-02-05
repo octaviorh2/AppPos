@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPOS.Views.LoginPage"
+             >
+
+
+    <Grid RowDefinitions="Auto, *, Auto">
+
+        <!-- Círculo superior derecho -->
+        <AbsoluteLayout Grid.Row="0" HorizontalOptions="EndAndExpand">
+            <Ellipse WidthRequest="180"
+                     HeightRequest="180"
+                     Fill="#cfd0d8"
+                     Opacity="0.3"
+                     TranslationX="50"
+                     TranslationY="-50"/>
+        </AbsoluteLayout>
+
+        <!-- Contenido central -->
+        <StackLayout Grid.Row="1"
+                     Padding="30"
+                     Spacing="25"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+
+            <!-- Logo -->
+            <Image Source="tienda_online.png"
+                   HeightRequest="120"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
+
+            <!-- Título -->
+            <Label Text="Inicio de Sesión"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#333" />
+
+            <!-- Campos de entrada -->
+            <Entry x:Name="emailEntry"
+                   Placeholder="Correo Electrónico"
+                   Text="{Binding Email}"
+                   Keyboard="Email"
+                   BackgroundColor="#F0F0F0"
+                    WidthRequest="350"
+                   HeightRequest="50"/>
+
+            <Entry x:Name="passwordEntry"
+                   Placeholder="Contraseña"
+                   Text="{Binding Password}"
+                   IsPassword="True"
+                   BackgroundColor="#F0F0F0"
+                    WidthRequest="350"
+                   HeightRequest="50"/>
+
+            <!-- Botón de inicio de sesión -->
+            <Button Text="Iniciar Sesión"
+                    Clicked="OnLoginButtonClicked"
+                    BackgroundColor="#007AFF"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10"
+                    FontAttributes="Bold"
+                    WidthRequest="350"
+                    HeightRequest="50"/>
+
+        </StackLayout>
+
+        <!-- Círculo inferior izquierdo -->
+        <AbsoluteLayout Grid.Row="2" HorizontalOptions="StartAndExpand">
+            <Ellipse WidthRequest="180"
+                     HeightRequest="180"
+                     Fill="#cfd0d8"
+                     Opacity="0.3"
+                     TranslationX="-50"
+                     TranslationY="50"/>
+        </AbsoluteLayout>
+
+        <Label x:Name="statusLabel"
+       Text="Validando información..."
+       FontSize="16"
+       TextColor="Gray"
+       HorizontalOptions="Center"
+       IsVisible="False"/>
+
+    </Grid>
+
+
+</ContentPage>

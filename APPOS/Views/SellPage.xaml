@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:APPOS.ViewModels"
+             x:Class="APPOS.Views.SellPage"
+             x:Name="Page"
+             Title="Facturas Guardadas">
+
+    <ContentPage.BindingContext>
+        <vm:SaleViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20">
+        
+
+        <CollectionView ItemsSource="{Binding Facturas}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Label Text="{Binding Nombre}" FontSize="16" 
+                               VerticalOptions="Center" />
+
+                        <Button Text="Abrir"
+                                BackgroundColor="LightBlue"
+                                HorizontalOptions="End"
+                                Command="{Binding Path=BindingContext.AbrirFacturaCommand, Source={x:Reference Page}}"
+                                CommandParameter="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

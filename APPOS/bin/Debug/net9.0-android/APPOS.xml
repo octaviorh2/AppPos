@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APPOS</name>
+    </assembly>
+    <members>
+        <member name="T:APPOS.ViewModels.ClientViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:APPOS.ViewModels.ClientViewModel.IsLoading">
+            <inheritdoc cref="F:APPOS.ViewModels.ClientViewModel.isLoading"/>
+        </member>
+        <member name="T:APPOS.ViewModels.LoginViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:APPOS.ViewModels.LoginViewModel.Email">
+            <inheritdoc cref="F:APPOS.ViewModels.LoginViewModel.email"/>
+        </member>
+        <member name="P:APPOS.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:APPOS.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="T:APPOS.ViewModels.ProductViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:APPOS.ViewModels.ProductViewModel.IsLoading">
+            <inheritdoc cref="F:APPOS.ViewModels.ProductViewModel.isLoading"/>
+        </member>
+        <member name="T:APPOS.ViewModels.ShoppingCartViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.Clients">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel.clients"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.SelectedClient">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel.selectedClient"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.PaymentMethods">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel.paymentMethods"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.SelectedPaymentMethod">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel.selectedPaymentMethod"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.Total">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel.total"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.UsePoints">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel._usePoints"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.IsCashSelected">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel._isCashSelected"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.IsTransferSelected">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel._isTransferSelected"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.EarnedPoints">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel._earnedPoints"/>
+        </member>
+        <member name="P:APPOS.ViewModels.ShoppingCartViewModel.Subtotal">
+            <inheritdoc cref="F:APPOS.ViewModels.ShoppingCartViewModel._subtotal"/>
+        </member>
+        <member name="M:APPOS.ViewModels.ShoppingCartViewModel.OnSelectedClientChanged(APPOS.Models.Client)">
+            <summary>Executes the logic for when <see cref="P:APPOS.ViewModels.ShoppingCartViewModel.SelectedClient"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:APPOS.ViewModels.ShoppingCartViewModel.SelectedClient"/> is changed.</remarks>
+        </member>
+        <member name="M:APPOS.ViewModels.ShoppingCartViewModel.OnUsePointsChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:APPOS.ViewModels.ShoppingCartViewModel.UsePoints"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:APPOS.ViewModels.ShoppingCartViewModel.UsePoints"/> is changed.</remarks>
+        </member>
+        <member name="T:APPOS.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Clients">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Clients" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedClient">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedClient" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PaymentMethods">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PaymentMethods" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPaymentMethod">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPaymentMethod" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Total">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Total" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UsePoints">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UsePoints" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsCashSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsCashSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsTransferSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsTransferSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EarnedPoints">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EarnedPoints" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Subtotal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Subtotal" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Clients">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Clients" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedClient">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedClient" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PaymentMethods">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PaymentMethods" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPaymentMethod">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPaymentMethod" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Total">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Total" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UsePoints">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UsePoints" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsCashSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsCashSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsTransferSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsTransferSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EarnedPoints">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EarnedPoints" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Subtotal">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Subtotal" generated properties.</summary>
+        </member>
+    </members>
+</doc>

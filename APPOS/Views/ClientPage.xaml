@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPOS.Views.ClientPage"
+             Title="Client">
+    <Grid>
+        <ScrollView>
+            <VerticalStackLayout Padding="10">
+                <CollectionView ItemsSource="{Binding clients}">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout Span="1" Orientation="Vertical" />
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" ColumnDefinitions="Auto, 1*" RowDefinitions="Auto, Auto, Auto, Auto">
+                                <!-- Imagen genérica para los clientes -->
+                                <Image Grid.Row="0" Grid.Column="0" 
+                                       Source="personalist.png" 
+                                       HeightRequest="150" 
+                                       WidthRequest="150"
+                                       Aspect="AspectFit"
+                                       Margin="5" />
+
+                                <StackLayout Grid.Row="0" Grid.Column="1" Padding="5" VerticalOptions="Start">
+                                    <Label Text="Nombre:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding name}" FontSize="14"  HorizontalOptions="Start" />
+
+                                    <Label Text="Correo:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding email}" FontSize="14" HorizontalOptions="Start" />
+
+                                    <Label Text="Puntos de Fidelización:" FontSize="14" FontAttributes="Bold" />
+                                    <Label Text="{Binding Points}" FontSize="14" HorizontalOptions="Start" />
+                                </StackLayout>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- ActivityIndicator centrado como alerta -->
+        <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           Color="Gray"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"
+                           Scale="1.5" />
+
+        <!-- Mensaje de "Cargando..." -->
+        <Label Text="Cargando clientes..."
+               IsVisible="{Binding IsLoading}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="18" 
+               FontAttributes="Bold" 
+               TextColor="Gray" />
+    </Grid>
+</ContentPage>

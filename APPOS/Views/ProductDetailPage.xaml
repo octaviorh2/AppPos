@@ -1,0 +1,50 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPOS.Views.ProductDetailPage"
+             BackgroundColor="White"
+             Padding="10">
+
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, 1*" Padding="10">
+            <!-- Título centrado -->
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                   Text="{Binding title}" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="Black"/>
+
+            <!-- Imagen a la izquierda -->
+            <Image Grid.Row="1" Grid.Column="0" 
+                   Source="{Binding image}" 
+                   HeightRequest="150" 
+                   WidthRequest="150" 
+                   Aspect="AspectFit"
+                   Margin="5" />
+
+            <!-- Detalles a la derecha -->
+            <StackLayout Grid.Row="1" Grid.Column="1" Padding="5" VerticalOptions="Start">
+                <Label Text="{Binding description}" 
+                       FontSize="14" 
+                       HorizontalOptions="FillAndExpand" 
+                       VerticalOptions="Start" 
+                       LineBreakMode="WordWrap" />
+                <Label Text="{Binding price, StringFormat='${0:N2}'}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" />
+                <Label Text="{Binding rate}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" />
+                <Label Text="{Binding count}" FontSize="16" FontAttributes="Bold" HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Spacing="10" HorizontalOptions="End" VerticalOptions="End">
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                        Text="Cerrar" 
+                        Clicked="OnCloseButtonClicked" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="End" 
+                            />
+            </StackLayout>
+                <!-- Botón de Cerrar en la parte inferior -->
+        
+            
+            
+        </Grid>
+    </ScrollView>
+</ContentPage>

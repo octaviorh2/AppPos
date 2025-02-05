@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell 
+    x:Class="APPOS.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:APPOS.Views"
+    Title="APPOS"  >
+    
+    <Shell.FlyoutHeader >
+        <StackLayout  Padding="10">
+            <Image Source="posterminal.png"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               HeightRequest="150" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    
+
+    <FlyoutItem Title="Productos" Icon="producto.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:ProductPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Clientes" Icon="clientes.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:ClientPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Facturas" Icon="ventas.png">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:SellPage}" />
+        </Tab>
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <Grid Padding="10">
+            <Button Text="Salir"
+                BackgroundColor="Red"
+                TextColor="White"
+                Clicked="OnLogoutClicked" />
+        </Grid>
+    </Shell.FlyoutFooter>
+
+
+
+</Shell>
